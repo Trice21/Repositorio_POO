@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class FormatearNombre {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce tu nombre completo: ");
+        String nombre = scanner.nextLine();
+
+        System.out.println(nombre.toLowerCase());
+        System.out.println(nombre.toUpperCase());
+
+        String[] palabras = nombre.split("\\s+");
+        StringBuilder titulo = new StringBuilder();
+        for (String palabra : palabras) {
+            titulo.append(Character.toUpperCase(palabra.charAt(0)))
+                  .append(palabra.substring(1).toLowerCase()).append(" ");
+        }
+
+        System.out.println(titulo.toString().trim());
+
+        scanner.close();
+    }
+}
