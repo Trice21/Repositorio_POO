@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class CalcularPesoPaquete {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce el número de payasos vendidos: ");
+        int payasos = scanner.nextInt();
+
+        System.out.print("Introduce el número de muñecas vendidas: ");
+        int munecas = scanner.nextInt();
+
+        int pesoTotal = (payasos * 112) + (munecas * 75);
+
+        System.out.println("El peso total del paquete es: " + pesoTotal + " gramos.");
+
+        scanner.close();
+    }
+}
