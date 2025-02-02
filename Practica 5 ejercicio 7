@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class ArbolNavidad {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa la base del árbol (número impar): ");
+        int base = scanner.nextInt();
+
+        int filas = 1;
+        while (filas <= base) {
+            int espacios = (base - filas) / 2;
+            int asteriscos = filas;
+
+            int i = 0;
+            while (i < espacios) {
+                System.out.print(" ");
+                i++;
+            }
+
+            int j = 0;
+            while (j < asteriscos) {
+                System.out.print("*");
+                j++;
+            }
+
+            System.out.println();
+            filas += 2;
+        }
+
+        scanner.close();
+    }
+}
